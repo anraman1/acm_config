@@ -1,0 +1,11 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: config-data-policies
+policyDefaults:
+  namespace: acm-config
+  policySets: []
+policies:
+  - name: rh-openshift-pipeline
+    manifests:
+      - path: ./manifests
