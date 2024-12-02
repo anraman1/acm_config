@@ -1,3 +1,4 @@
+---
 apiVersion: machineconfiguration.openshift.io/v1
 kind: MachineConfig
 metadata:
@@ -14,3 +15,20 @@ spec:
        overwrite: true
        contents:
          source: data:text/plain;charset=utf-8;base64,dGhpcyBpcyBvY3AgbGFiCg==
+---
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  labels:
+    machineconfiguration.openshift.io/role: worker
+  name: motd3
+spec:
+  config:
+    ignition:
+      version: 3.4.0
+    storage:
+     files:
+     - path: /etc/motd3
+       overwrite: true
+       contents:
+         source: data:text/plain;charset=utf-8;base64,dGhpcyBpcyBvY3AgbGFiMQo=
