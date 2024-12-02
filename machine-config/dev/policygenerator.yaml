@@ -1,0 +1,12 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: machine-config
+policyDefaults:
+  namespace: acm-config
+  placement:
+   placementRulePath: placementrule.yaml 
+policies:
+  - name: dev-machine-config
+    manifests:
+      - path: manifests
