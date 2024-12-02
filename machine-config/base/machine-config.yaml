@@ -21,7 +21,7 @@ kind: MachineConfig
 metadata:
   labels:
     machineconfiguration.openshift.io/role: worker
-  name: motd3
+  name: motd4
 spec:
   config:
     ignition:
