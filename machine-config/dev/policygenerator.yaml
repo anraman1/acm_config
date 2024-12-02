@@ -3,6 +3,7 @@ kind: PolicyGenerator
 metadata:
   name: machine-config
 policyDefaults:
+  remediationAction: enforce
   namespace: acm-config
   placement:
    placementRulePath: placementrule.yaml 
