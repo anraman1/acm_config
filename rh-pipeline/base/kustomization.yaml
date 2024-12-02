@@ -1,2 +1,2 @@
 resources:
-./rh-pipeline-status.yaml
+- ./rh-pipeline-status.yaml

@@ -4,8 +4,9 @@ metadata:
   name: config-data-policies
 policyDefaults:
   namespace: acm-config
-  policySets: []
+  placement:
+   placementRulePath: placementrule.yaml 
 policies:
-  - name: rh-openshift-pipeline
+  - name: dev-rh-openshift-pipeline
     manifests:
-      - path: ./manifests
+      - path: manifests
