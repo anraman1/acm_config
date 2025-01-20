@@ -1,0 +1,27 @@
+Kind: Task
+metadata:
+  namespace: ecs-pipeline
+  name: git-clone
+params:
+  - name: url
+    description:
+  - name: branch
+    description:
+    default: main
+steps:
+  - name: clone
+    image: git:latest
+    scripts:
+     #!/bin/bash
+     echo "Branch is $(params.branch) \n"
+     echo "Git URL is $(params.url) \n"
+     git clone $params.url
+    volumeMounts:
+    - mountPath: /data/clone
+      name: clone-storage
+workspaces:
+  - name: shared
+    mountPath: /data/clone
+volumes:
+  - name: clone-storage
+    emptyDir: {}    
