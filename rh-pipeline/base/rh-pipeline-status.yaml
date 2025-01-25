@@ -1,7 +1,16 @@
-apiVersion: operators.coreos.com/v1alpha1
-kind: ClusterServiceVersion
+apiVersion: policy.open-cluster-management.io/v1
+kind: ConfigurationPolicy
 metadata:
-  name: openshift-pipelines-operator-rh.v1.15.3
-  namespace: openshift-pipeline
-status:
-  phase: "Succeeded"
+  name: dev-rh-openshift-pipeline-status
+spec:
+  object-templates:
+  - complianceType: musthave
+    remediationAction: inform 
+    objectDefinition:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: ClusterServiceVersion
+      metadata:
+        name: openshift-pipelines-operator-rh.v1.15.3
+        namespace: openshift-pipeline
+      status:
+        phase: Succeeded
