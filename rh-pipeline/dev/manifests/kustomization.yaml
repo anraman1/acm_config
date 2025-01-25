@@ -1,2 +1,15 @@
 resources:
 - ../../base
+
+patches:
+ - target:
+     kind: subscription
+     name: openshift-pipelines-operator
+   patch: |-
+     - op: replace
+       path: /spec/channel
+       value: stable
+
+       
+       
+      
