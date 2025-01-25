@@ -2,4 +2,4 @@ resources:
 - ./rh-pipeline-status.yaml
 - ./rh-pipeline-subs.yaml
 - ./operator-group.yaml
-= ./namespace.yaml
+- ./namespace.yaml
