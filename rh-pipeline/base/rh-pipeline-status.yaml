@@ -2,6 +2,6 @@ apiVersion: operators.coreos.com/v1alpha1
 kind: ClusterServiceVersion
 metadata:
   name: openshift-pipelines-operator-rh.v1.15.3
-  namespace: openshift-operators
+  namespace: openshift-pipeline
 status:
   phase: "Succeeded"

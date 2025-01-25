@@ -1,8 +1,8 @@
-apiVesion: operators.coreos.com/v1
+apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
   name: openshift-pipelines-operator
-  namespace: openshift-operators
+  namespace: openshift-pipeline
 spec:
   targetNamespaces:
-  - openshift-operators
+  - openshift-pipeline
