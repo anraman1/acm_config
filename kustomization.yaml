@@ -2,3 +2,4 @@ resources:
 - ./machine-config
 - ./rh-pipeline
 - ./oauth-config
+- ./clusterrolebinding.yaml
