@@ -1,0 +1,13 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: dev-cluster-rolebinding 
+policyDefaults:
+  remediationAction: enforce
+  namespace: acm-config
+  placement:
+   placementPath: placement.yaml 
+policies:
+  - name: dev-cluster-rolebinding
+    manifests:
+      - path: manifests
