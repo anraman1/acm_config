@@ -1,7 +1,7 @@
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: placement-dev-clusterrolebinding 
+  name: placement-lab-clusterrolebinding
   namespace: acm-config
 spec:
   predicates:
@@ -11,4 +11,4 @@ spec:
           - key: environment 
             operator: In
             values:
-              - dev1
+              - dev 

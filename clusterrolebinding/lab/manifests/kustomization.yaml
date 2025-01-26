@@ -10,7 +10,4 @@ patches:
       value:  
         apiGroup: rbac.authorization.k8s.io
         kind: User
-        name: ecsdev
-    - op: replace 
-      path: /metadata/name
-      value: devadmin  
+        name: ecslab

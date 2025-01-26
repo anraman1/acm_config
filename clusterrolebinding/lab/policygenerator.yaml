@@ -1,13 +1,13 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: PolicyGenerator
 metadata:
-  name: dev-rh-openshift-pipeline
+  name: lab-cluster-rolebinding 
 policyDefaults:
-  namespace: acm-config
   remediationAction: enforce
+  namespace: acm-config
   placement:
-   placementRulePath: placementrule.yaml 
+   placementPath: placement.yaml 
 policies:
-  - name: dev-rh-openshift-pipeline
+  - name: lab-cluster-rolebinding
     manifests:
       - path: manifests

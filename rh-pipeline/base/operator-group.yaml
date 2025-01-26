@@ -3,6 +3,4 @@ kind: OperatorGroup
 metadata:
   name: openshift-pipelines-operator
   namespace: openshift-pipeline
-spec:
-  targetNamespaces:
-  - openshift-pipeline
+spec: {}
