@@ -7,7 +7,7 @@ patches:
    patch: |-
      - op: replace
        path: /spec/channel
-       value: pipelines-1.55 
+       value: pipelines-1.15
 
        
        
