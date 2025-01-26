@@ -12,5 +12,6 @@ spec:
             operator: In
             values:
               - dev
+         matchExpressions:
           - key: acs-operator
             operator: exists
