@@ -3,3 +3,4 @@ resources:
 - ./rh-pipeline
 - ./oauth-config
 - ./clusterrolebinding
+- ./acs-operator
