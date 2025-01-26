@@ -1,13 +1,13 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: PolicyGenerator
 metadata:
-  name: oauth-config
+  name: dev-acs-operator 
 policyDefaults:
   remediationAction: enforce
   namespace: acm-config
   placement:
-   placement: placement.yaml 
+   placementPath: placement.yaml 
 policies:
-  - name: dev-oauth-config
+  - name: dev-acs-operator
     manifests:
       - path: manifests

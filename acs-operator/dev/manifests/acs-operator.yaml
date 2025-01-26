@@ -1,0 +1,14 @@
+apiVersion: policy.open-cluster-management.io/v1beta1
+kind: OperatorPolicy
+metadata:
+  name: install-acs-operator
+spec:
+  remediationAction: enforce
+  severity: critical
+  complianceType: musthave
+  upgradeApproval: None
+  subscription:
+    channel: rhacs-4.6
+    name: rhacs-operator
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace

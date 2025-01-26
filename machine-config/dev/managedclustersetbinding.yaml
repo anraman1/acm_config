@@ -1,0 +1,25 @@
+#managedClusterSetBindings:
+apiVersion: cluster.open-cluster-management.io/v1beta2
+kind: ManagedClusterSetBinding
+metadata:
+  name: global
+  namespace: acm-config
+spec:
+  clusterSet: global
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2025-01-22T07:23:22Z"
+  name: open-cluster-management:subscription-admin
+  resourceVersion: "159484"
+  uid: c0e388fd-d613-4fc8-a609-9889049ac776
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: open-cluster-management:subscription-admin
+subjects: 
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: admin
