@@ -1,0 +1,4 @@
+resources:
+- configmap-d1.yaml
+- configmap-d2.yaml
+

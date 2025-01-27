@@ -1,0 +1,16 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: ConfigurationPolicy
+metadata:
+  name: dev-policy-dependency-cm-2
+spec:
+  remediationAction: enforce
+  object-templates:
+  - complianceType: mustnothave
+    objectDefinition:
+      apiVersion: v1
+      data:
+        a: "1"
+      kind: ConfigMap
+      metadata:
+        name: data2
+        namespace: rhacs-operator

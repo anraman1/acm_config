@@ -1,0 +1,21 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: dev-policy-dependency
+policyDefaults:
+  consolidateManifests: false 
+  remediationAction: enforce
+  namespace: acm-config
+  placement:
+   placementPath: placement.yaml 
+policies:
+  - name: dev-policy-dependency
+    manifests:
+      - path: manifests/configmap-d1.yaml 
+      - path: manifests/configmap-d2.yaml 
+        extraDependencies:
+          - apiVersion: policy.open-cluster-management.io/v1
+            kind: ConfigurationPolicy
+            name: dev-policy-dependency-cm-1
+            compliance: Compliant
+
