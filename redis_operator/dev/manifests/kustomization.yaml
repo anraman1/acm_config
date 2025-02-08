@@ -1,2 +1,2 @@
 resources:
-- redis-operator.yaml 
+#- redis-operator.yaml 

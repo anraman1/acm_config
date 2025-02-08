@@ -3,21 +3,20 @@ kind: PolicyGenerator
 metadata:
   name: dev-redis-operator 
 policyDefaults:
+  consolidateManifests: false
   remediationAction: enforce
+  namespaceSelector: 
+     matchExpressions:
+            - key: apps 
+              operator: In
+              values:
+              - redis-operator 
+     include:
+              - redis-*
   namespace: acm-config
   placement:
    placementPath: placement.yaml 
 policies:
   - name: dev-redis-operator
     manifests:
-      - path: manifests
-        Namespaceselectors:
-          matchExpressions:
-            - key: name
-              operator: In
-              values:
-                - acm-config
-          include:
-              - redis-*
-          exclude:
-              - [*]
+      - path: manifests/redis-operator.yaml

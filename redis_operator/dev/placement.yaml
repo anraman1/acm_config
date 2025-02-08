@@ -12,6 +12,3 @@ spec:
             operator: In
             values:
               - dev
-         matchExpressions:
-          - key: redis-operator
-            operator: exists
