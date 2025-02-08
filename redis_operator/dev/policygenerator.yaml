@@ -11,3 +11,13 @@ policies:
   - name: dev-redis-operator
     manifests:
       - path: manifests
+        Namespaceselectors:
+          matchExpressions:
+            - key: name
+              operator: In
+              values:
+                - acm-config
+          include:
+              - redis-*
+          exclude:
+              - [*]
