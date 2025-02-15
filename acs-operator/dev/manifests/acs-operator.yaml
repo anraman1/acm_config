@@ -8,7 +8,7 @@ spec:
   complianceType: musthave
   upgradeApproval: None
   subscription:
-    channel: rhacs-4.50
+    channel: rhacs-4.55
     name: rhacs-operator
     source: redhat-operators
     sourceNamespace: openshift-marketplace
