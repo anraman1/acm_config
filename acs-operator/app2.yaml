@@ -9,5 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://github.com/anraman1/argo-apps.git
+    path: argo-apps
+    repoURL: https://github.com/anraman1/acm_config.git
     targetRevision: main
