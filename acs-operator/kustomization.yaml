@@ -1,4 +1,4 @@
 resources:
 #- dev
 - configmap.yaml
-- app2.yaml
+#- app2.yaml
