@@ -4,11 +4,17 @@ metadata:
   name: test
   namespace: argocd
 spec:
-  destination:
-    namespace: default
-    server: https://172.31.0.166:6443
   project: default
   source:
-    path: argo-apps
     repoURL: https://github.com/anraman1/acm_config.git
     targetRevision: main
+    path: argo-apps
+  destination:
+    name: cluster2
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
