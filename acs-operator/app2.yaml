@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: default
-    server: https://kubernetes.default.svc
+    server: https://172.31.0.166:6443
   project: default
   source:
     path: argo-apps
