@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: default
-    name: spoke1
+    server: https://kubernetes.default.svc
   project: default
   source:
     path: argo-apps/app3-manifest 
