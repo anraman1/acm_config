@@ -11,7 +11,7 @@ spec:
     path: argo-apps
   destination:
     name: spoke1
-    namespace: default
+    namespace: ocp-testing
   syncPolicy:
     automated:
       prune: true
