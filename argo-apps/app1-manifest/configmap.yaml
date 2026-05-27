@@ -8,8 +8,8 @@ data:
 ---
 
 apiVersion: v1
-kind: namespace 
+kind: Namespace
 metadata:
+  name: app1
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
-  name: app1
