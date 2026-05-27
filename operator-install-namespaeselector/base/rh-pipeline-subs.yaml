@@ -1,0 +1,23 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: ConfigurationPolicy
+metadata:
+  name: dev-rh-openshift-pipeline-status
+spec:
+  namespaceSelector:
+    include: ["test-*", "icg-*"]
+    exclude: ["default", "openshift-*", "cti-*"]
+    matchLabels:
+      enableredis: "true"
+  object-templates:
+  - complianceType: musthave
+    remediationAction: inform 
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: Subscription
+      metadata:
+        name: openshift-pipelines-operator
+        namespace: {{ .ObjectNamespace }}
+      spec:
+        channel:  {{ .ObjectNamespace }}
+        name: openshift-pipelines-operator-rh 
+        source: redhat-operators 
+        sourceNamespace: openshift-marketplace 

@@ -11,7 +11,7 @@ policies:
   - name: dev-redis-operator
     manifests:
       - path: manifests
-        Namespaceselectors:
+        namespaceSelector:
           matchExpressions:
             - key: name
               operator: In

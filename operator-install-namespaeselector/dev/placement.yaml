@@ -1,7 +1,7 @@
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: placement-acs-operator
+  name: placement-pipeline
   namespace: acm-config
 spec:
   predicates:
@@ -11,7 +11,4 @@ spec:
           - key: environment 
             operator: In
             values:
-              - dev
-         matchLabels:
-          - key: acs-operator
-            operator: exists
+              - dev 
