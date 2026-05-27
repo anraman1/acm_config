@@ -6,9 +6,9 @@ metadata:
 spec:
   destination:
     namespace: default
-    server: https://kubernetes.default.svc
+    name: spoke1
   project: default
   source:
-    path: argo-apps
+    path: argo-apps/apps-apps
     repoURL: https://github.com/anraman1/acm_config.git
     targetRevision: main
