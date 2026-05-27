@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/anraman1/acm_config.git
+    targetRevision: main
+    path: argo-apps
+  destination:
+    name: spoke1
+    namespace: ocp-testing
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
+
