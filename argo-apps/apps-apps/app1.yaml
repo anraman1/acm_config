@@ -12,3 +12,10 @@ spec:
     path: argo-apps/app1-manifest 
     repoURL: https://github.com/anraman1/acm_config.git
     targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+    
