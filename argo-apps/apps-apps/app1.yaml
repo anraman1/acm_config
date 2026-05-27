@@ -9,6 +9,6 @@ spec:
     name: spoke1
   project: default
   source:
-    path: argo-apps/apps-apps/app2-manifest
+    path: argo-apps/app1-manifest 
     repoURL: https://github.com/anraman1/acm_config.git
     targetRevision: main
