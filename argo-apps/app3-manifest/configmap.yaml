@@ -5,11 +5,3 @@ metadata:
   namespace: app1
 data:
   aws_access_key_id: "test"
----
-
-apiVersion: v1
-kind: namespace 
-metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "-1"
-  name: app1
