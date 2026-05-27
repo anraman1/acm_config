@@ -1,0 +1,13 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: dev-rh-openshift-pipeline
+policyDefaults:
+  namespace: acm-config
+  remediationAction: enforce
+  placement:
+   placementRulePath: placementrule.yaml 
+policies:
+  - name: dev-rh-openshift-pipeline
+    manifests:
+      - path: manifests

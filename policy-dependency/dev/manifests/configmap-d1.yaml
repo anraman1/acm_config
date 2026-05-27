@@ -15,3 +15,37 @@ spec:
       metadata:
         name: data1
         namespace: rhacs-operator
+
+
+apiVersion: policy.open-cluster-management.io/v1
+kind: ConfigurationPolicy
+metadata:
+  name: dev-redis-operator
+spec:
+  namespaceSelector:
+    matchExpressions:
+      - key: apps
+        operator: In
+        values:
+        - redis-operator
+    include:
+        - redis-*
+  remediationAction: inform 
+  object-templates:
+  - complianceType: musthave
+    RemediationAction: enforce
+    objectDefinition:
+      apiVersion: policy.open-cluster-management.io/v1beta1
+      kind: OperatorPolicy
+      metadata:
+        name: install-redis-operator
+      spec:
+        remediationAction: enforce
+        severity: critical
+        complianceType: musthave
+        upgradeApproval: None
+        subscription:
+          channel: rhredis-4.50
+          name: rhredis-operator
+          source: redhat-operators
+          sourceNamespace: openshift-marketplace

@@ -1,0 +1,14 @@
+resources:
+- ../../base
+
+patches:
+ - target:
+     kind: Subscription 
+   patch: |-
+     - op: replace
+       path: /spec/channel
+       value: pipelines-1.15
+
+       
+       
+      
