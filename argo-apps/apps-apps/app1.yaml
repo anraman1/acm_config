@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app1
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    name: spoke1
+  project: default
+  source:
+    path: argo-apps/apps-apps/app2-manifest
+    repoURL: https://github.com/anraman1/acm_config.git
+    targetRevision: main
