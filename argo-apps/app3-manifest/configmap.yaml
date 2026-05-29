@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app3-configmap
+  namespace: app3
+data:
+  aws_access_key_id: "test"

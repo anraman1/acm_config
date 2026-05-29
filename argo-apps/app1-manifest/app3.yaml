@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app1
+  name: app3
   namespace: argocd
 spec:
   destination:
     namespace: default
-    name: spoke1
+    server: https://kubernetes.default.svc
   project: default
   source:
-    path: argo-apps/app1-manifest 
+    path: argo-apps/app3-manifest 
     repoURL: https://github.com/anraman1/acm_config.git
     targetRevision: main
   syncPolicy:
@@ -18,5 +18,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - serverSide=
     
