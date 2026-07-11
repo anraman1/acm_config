@@ -1,0 +1,9 @@
+apiVersion: v
+kind: Namespace
+metadata:
+  name: greathearts
+  labels:
+    name: greathearts
+    function: school
+  annotations:
+    location: "iving"
