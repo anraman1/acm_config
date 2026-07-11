@@ -1,0 +1,17 @@
+apiVersion: network.openshift.io/v1
+kind: Route
+metadata:
+  name: myroute
+  namespace: greathearts
+  labels:
+    app: myapp
+    environment: development
+    location: "iving"
+spec:
+  host: myroute.example.com
+  to:
+    kind: Service
+    name: myservice
+  port:
+    targetPort: 8080
+    

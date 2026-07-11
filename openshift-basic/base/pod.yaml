@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  namespace: greathearts
+  labels:
+    app: myapp
+    environment: development
+    location: "iving"
+spec:
+  containers:
+    - name: mycontainer
+      image: python:3.8
+      ports:
+        - containerPort: 8080
+           protocol: TCP
+           commands:
+             - python
+             - -m
+             - http.server
+             - "8080"
+  

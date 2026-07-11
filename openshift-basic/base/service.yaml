@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myservice
+  namespace: greathearts
+  labels:
+    app: myapp
+    environment: development
+    location: "iving"
+spec:
+  selector:
+    app: myapp  
+  ports:
+    - protocol: TCP 
+      port: 80
+      targetPort: 8080
+      
